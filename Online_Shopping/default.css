@@ -18,7 +18,6 @@ body
 
 #Container
 {
-	width: 900px;
 	margin: 0px auto;
 }
 
@@ -29,29 +28,28 @@ body
 
 #Head
 {
-	height: 212px;
-	width: 900px;
+	height: 50px;
+	width: 100%;
 	background: url("img/bac_logo.gif") top left repeat-x;
 }
 
 #Head_left
 {
-	height: 212px;
-	width: 324px;
+	height: 50px;
+	width: 30%;
 	float: left;
 }
 
 #Leaf_top
 {
-    background: url("img/leaf.gif") top left no-repeat;
+    background: url("") top left no-repeat;
     height: 161px;
-    width: 324px;
 	float: left;
 }
 
 #Leaf_bottom
 {
-	background: url("img/leaf2.gif") top left no-repeat;
+	background: url("") top left no-repeat;
     height: 51px;
 	float: left;
 	width: 324px;
@@ -93,8 +91,8 @@ body
 
 #Head_right
 {
-	height: 212px;
-	width: 576px;
+	height: 50px;
+	width: 70%;
 	float: right;
 	clear: right;
 }
@@ -102,7 +100,7 @@ body
 #Logo
 {
 	height: 161px;
-	width: 576px;
+	width: 70%;
 }
 
 #Name
@@ -129,21 +127,21 @@ body
 
 #Top_menu
 {
-    height: 51px;
-	width: 576px;
-	background: url("img/bac_button.gif") top left repeat-x;
+    height: 50px;
+	width: 70%;
+	background: url("") top left repeat-x;
 }
 
 #Top_menu a
 {
-	width: 110px;
-	height: 51px;
+	width: 17.5%;
+	height: 50px;
 	float: right;
 	color: #0e88af;
 	text-decoration: none;
 	font-weight: bold;
 	padding-top: 20px;
-	text-indent: 38px;
+	text-indent: 10px;
 }
 
 #Top_menu a:hover
@@ -153,27 +151,27 @@ body
 
 #Top_menu .home
 {
-    background: url("img/home.jpg") top left no-repeat;
+    background: url("") top left no-repeat;
 }
 
 #Top_menu .help
 {
-    background: url("img/help.jpg") top left no-repeat;
+    background: url("") top left no-repeat;
 }
 
 #Top_menu .contact
 {
-    background: url("img/contact.jpg") top left no-repeat;
+    background: url("") top left no-repeat;
 }
 
 #Top_menu .orders
 {
-    background: url("img/orders.jpg") top left no-repeat;
+    background: url("") top left no-repeat;
 }
 
 #Top_menu .kart
 {
-    background: url("img/kart.jpg") top left no-repeat;
+    background: url("") top left no-repeat;
 }
 
 #LeftPart
@@ -300,7 +298,7 @@ body
 #RightPart
 {
 	width: 680px;
-	float: right;
+	float: left;
 	clear: left;
 	background-color: #f5fdfd;
 	margin-top: -12px;
@@ -315,9 +313,10 @@ body
 
 #Page
 {
-	width: 675px;
-	padding: 5px;
-	padding-right: 0px;
+	width: 1000px;
+	height: 500px;
+	padding-left: 10%;
+	padding-right: 10%;
 }
 
 *>#Page
