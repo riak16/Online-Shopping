@@ -1,32 +1,37 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cz"><head><title>Company name - title</title>
-""
-<meta http-equiv="Content-language" content="cs">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="description" content=" ">
-<meta name="keywords" content=" ">
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-<link rel="icon" href="favicon.ico" type="image/x-icon">
-<meta name="author" content="Klára Frolichová, Sunlight webdesign">
-<meta name="Copyright" content="Klára Frolichová, Sunlight webdesign 2007">
-<meta name="design" content="Sunlight webdesign - http://www.sunlight.cz, info@sunlight.cz">
-<link rel="stylesheet" type="text/css" href="default.css" title="default">
-<script>
-function abc()
-{
-var arr=new Array("http://img10.deviantart.net/0577/i/2012/342/2/5/nike_shoe_ad_by_i_heartart2-d5ne3z4.jpg",
-	"http://2.bp.blogspot.com/-P_Rz-Mdkr4E/T7wCvg6ylwI/AAAAAAAADjY/h9u7q8BUOUk/s1600/Chanel-2012-sunglasses-Linda-Evangelista-for-Chanel-02.jpg",
-	"http://levi.com.pk/pk/commuter1.jpg");
-var ind=eval(document.f1.h1.value);
-document.img.src=arr[ind];
-document.f1.h1.value=ind+1;
-if(document.f1.h1.value==3)
-{
-document.f1.h1.value=0;
-}
-}
-setInterval("abc()",3000);
-</script>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cz">
+<head>
+	<title>Online-Shopping!</title>
+	<meta http-equiv="Content-language" content="cs">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="description" content=" ">
+	<meta name="keywords" content=" ">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<meta name="author" content="Klára Frolichová, Sunlight webdesign">
+	<meta name="Copyright" content="Klára Frolichová, Sunlight webdesign 2007">
+	<meta name="design" content="Sunlight webdesign - http://www.sunlight.cz, info@sunlight.cz">
+	<link rel="stylesheet" type="text/css" href="default.css" title="default">
+	<script>
+		function abc()
+		{
+			var arr=new Array("https://aotw-pd.s3.amazonaws.com/media-youtube/--CeaG_rH64.jpg",
+				"https://i.pinimg.com/originals/e3/e5/94/e3e59435e50e833db5f08809ce596fda.jpg",
+				"http://theimpression.com/wp-content/uploads/Levis-ad-advertisement-spring-summer-2014-the-impression-theimpression-12.jpg",
+				"https://www.thelocal.dk/userdata/images/article/b4cb2f8e03da8c0b383c63b3e24675ad1cda2afe9284f7891dd0f7ff53fd1947.jpg",
+				"http://www.fashiontrendsetter.com/v2/wp-content/uploads/2016/09/TOMMYGIGI.jpg"
+				);
+			var ind=eval(document.f1.index.value);
+			var slide=document.getElementById("slide");
+			slide.src=arr[ind];
+			document.f1.index.value=ind+1;
+			if(document.f1.index.value==arr.length)
+			{
+				document.f1.index.value=0;
+			}
+		}
+		setInterval("abc()",2000);
+	</script>
 </head>
 
 <body>
@@ -34,69 +39,61 @@ setInterval("abc()",3000);
 <div id="Inner">
 <div id="Container">
 	<div id="Head">
-			<div id="Head_left">
-				<div id="Leaf_top"><img src=""/></div>
-				<div id="Leaf_bottom"> 
-					<a class="registration" href="register.html">REGISTRATION</a> 
-					<a class="log-in" href="login.html">LOG IN</a>
-				</div>
+		<div id="Head_left">
+			<div id="Logo"> 
+				<a class="registration" href="register.html">REGISTRATION</a> 
+				<a class="log-in" href="login.html">LOG IN</a>
 			</div>
+		</div>
 		<div id="Head_right">
 			<div id="Top_menu"> 
-				<a class="kart" href="?page=home"><span>CART</span></a> 
-				<a class="orders" href="?page=home"><span>ORDERS</span></a>
-				<a class="contact" href="?page=home"><span>CONTACT</span></a>
-				<a class="help" href="help.html"><span>HELP</span></a>
-				<a class="home" href="?page=home"><span>HOME</span></a>
+				<div id="search">
+				    <input type="text" name="t1" value="Search" onclick="this.value=''" onBlur="if(this.value==''){this.value='search';}"/>
+				    <button type="submit">Go!</button>
+			    </div>
+			    <a class="top_menu_item" href="?page=home">HOME</a>
+				<a class="top_menu_item" href="?page=home">CART</a> 
+				<a class="top_menu_item" href="?page=home">ORDERS</a>
+				<a class="top_menu_item" href="?page=home">CONTACT</a>
+				<a class="top_menu_item" href="help.html">HELP</a>
+				
 			</div>
 		</div>
 	</div>
-	<div id="Page"><img src="http://levi.com.pk/pk/commuter1.jpg" alt="Ads" width="1280px" height="500px" name="img"/>
+	<div id="Page"><img id="slide" src="http://levi.com.pk/pk/commuter1.jpg" alt="Ads" width="1280px" height="500px" name="img"/>
 		<form name="f1">
-			<input type="hidden" name="h1" value="0" />
+			<input type="hidden" name="index" value="0" />
 		</form>
 	</div>
-	<div id="CentralPart">
-	<div id="LeftPart">
-		<div id="Menu">
-			<div id="Menu_header">
-				<div class="menu_header_left"> 
-					<span class="menu_text">
-						<font face="Georgia, Times New Roman, Times, serif">Search</font>
-					</span>
-				</div>
-				<div class="menu_header_right">
-				</div>
-				<div id="Menu_content"> <!--<a class="menu_item" href="?page=home"><span>--><!-- Start of Page Search -->
-
-						    <h5>&nbsp;</h5>
-						    <input type="text" name="t1" value="search" onfocus=
-							"if(this.value=='search')
-							{this.value='';}
-							"
-							onBlur=
-							"if(this.value=='')
-							{this.value='search';}
-							"/>
-				            <input name="sub" type="submit" class="button" id="sub" value="Go" />
-
-						
-
-						  <h5>&nbsp;</h5>
-						  <!--</form>-->
-						
-
-						<!-- End of Page Search --><!--/span></a><br-->
-				</div>
-				<div class="menu_header_left"> 
+	<!--div id="Poll">
+	<div id="Poll_header">
+	<div class="menu_header_left"> <span class="menu_text">WOMEN</span>
+	</div>
+	<div class="menu_header_right"> </div>
+	</div>
+	<div id="Poll_content"> <span class="poll_question">Donec
+	at justo ac ipsum laoreet dapibus?</span><br>
+	<a class="poll_unswer" href="?page=home"><span>Lorem
+	ipsum</span></a><br>
+	<a class="poll_unswer" href="?page=home"><span>Nulla
+	facilisi</span></a><br>
+	<a class="poll_unswer" href="?page=home"><span>Suspendisse
+	ipsum</span></a><br>
+	</div>
+	</div>
+	<div id="Banner"> <img src="img/banner.jpg" alt="illustration image"> </div>
+	</div-->
+	<div id = "categories">
+		<div id="LeftPart">
+				<div class="menu_header"> 
 					<span class="menu_text">
 						<a href="men.html">MEN</a>
 					</span>
 				</div>
-				<div class="menu_header_right"> 
+				<div id="menu_header_left_img"> 
+					<a href ="" ><img src="https://i.pinimg.com/736x/56/90/6b/56906bf1d22f9300c853546a08870a22--blue-blazer-outfit-blazer-outfits-men.jpg" alt="Men categories" width="400px" height="500px" name="img"/></a>
 				</div>
-			</div>
-			<div id="Menu_content"> 
+			<div class ="Menu_content"> 
 				<a class="menu_item" href="mcasual.html"><span>Casual Shirts</span></a><br>
 				<a class="menu_item" href="mjeans.html"><span>Jeans</span></a><br>
 				<a class="menu_item" href="mtshirts.html"><span>T-shirts</span></a><br>
@@ -104,14 +101,17 @@ setInterval("abc()",3000);
 				<a class="menu_item" href="mshorts.html"><span>Shorts</span></a><br>
 				<a class="menu_item" href="mwatches.html"><span>Watches</span></a><br>
 			</div>
-			<div class="menu_header_left"> 
+		</div>
+		<div id="CentralPart">
+			<div class="menu_header"> 
 				<span class="menu_text">
 					<a href="women1.html">WOMEN</a>
 				</span>
 			</div>
-			<div class="menu_header_right">
+			<div id="" ="menu_header_central_img">
+				<a href ="" ><img src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/1873038/2017/4/27/11493284973088-next-Women-Jumpsuit-3761493284973075-1.jpg" alt="Ads" width="400px" height="500px" name="img"/></a>
 			</div>
-			<div id="Menu_content"> 
+			<div class="Menu_content"> 
 				<a class="menu_item" href="dress.php?catg=2 & subcatg=dresses"><span>Dresses</span></a><br>
 				<a class="menu_item" href="msuits.html"><span>Churidar Suits</span></a><br>
 				<a class="menu_item" href="mkurtas.html"><span>Kurtas</span></a><br>
@@ -119,15 +119,17 @@ setInterval("abc()",3000);
 				<a class="menu_item" href="moffice.html"><span>Office Wear</span></a><br>
 				<a class="menu_item" href="mjewel.html"><span>Artificial Jewellery</span></a><br>
 			</div>
-
-			<div class="menu_header_left"> 
+		</div>
+		<div id="RightPart">
+			<div class="menu_header"> 
 				<span class="menu_text">
 					<a href="kids1.html">KIDS</a>
 				</span>
 			</div>
-			<div class="menu_header_right"> 
+			<div id="menu_header_right_img">
+				<a href ="" ><img src="https://i.pinimg.com/736x/c1/ed/ae/c1edae728451f5c0fe3b741737b08104--pyjamas-online-kids-pajamas.jpg" alt="Ads" width="400px" height="500px" name="img"/></a>
 			</div>
-			<div id="Menu_content"> 
+			<div class="Menu_content"> 
 				<a class="menu_item" href="mbaby.html"><span>Baby Apparel</span></a><br>
 				<a class="menu_item" href="mgirl.html"><span>Girls Apparel</span></a><br>
 				<a class="menu_item" href="mboy.html"><span>Boys Apparel</span></a><br>
@@ -135,86 +137,66 @@ setInterval("abc()",3000);
 				<!--<a class="menu_item" href="?page=home"><span>Office Wear</span></a><br>
 				<a class="menu_item" href="?page=home"><span>Artificial Jewellery</span></a><br>-->
 			</div>
-		</div>
-</div>
-<!--<div id="Poll">
-<div id="Poll_header">
-<div class="menu_header_left"> <span class="menu_text">WOMEN</span>
-</div>
-<div class="menu_header_right"> </div>
-</div>
-<div id="Poll_content"> <span class="poll_question">Donec
-at justo ac ipsum laoreet dapibus?</span><br>
-<a class="poll_unswer" href="?page=home"><span>Lorem
-ipsum</span></a><br>
-<a class="poll_unswer" href="?page=home"><span>Nulla
-facilisi</span></a><br>
-<a class="poll_unswer" href="?page=home"><span>Suspendisse
-ipsum</span></a><br>
-</div>
-</div>
-<div id="Banner"> <img src="img/banner.jpg" alt="illustration image"> </div>
-</div>-->
-<div id="RightPart">
-  <!--div id="Page"><img src="http://levi.com.pk/pk/commuter1.jpg" alt="" width="1000" height="400" name="img"/>
-	  <form name="f1">
-	  <input type="hidden" name="h1" value="0" />
-	  </form>
-	    <div id="Page_top">
-			  <p> <marquee behavior="scroll" direction="left" onmouseover="stop()" onmouseout="start()"><font color="#FFFF99"><h3>30%off on all summer wear...Hurry!!!</h3></font><font color="#00CC99"><h4>Enjoy the pleasure of shopping with Fashion Shop...</h4></font></marquee><br>
+	  		<!--div id="Page"><img src="http://levi.com.pk/pk/commuter1.jpg" alt="" width="1000" height="400" name="img"/>
+		      <form name="f1">
+		  <input type="hidden" name="h1" value="0" />
+		  </form>
+		    <div id="Page_top">
+				  <p> <marquee behavior="scroll" direction="left" onmouseover="stop()" onmouseout="start()"><font color="#FFFF99"><h3>30%off on all summer wear...Hurry!!!</h3></font><font color="#00CC99"><h4>Enjoy the pleasure of shopping with Fashion Shop...</h4></font></marquee><br>
 
-			  </p>
-	  	</div>
-	  <div id="Page_center">
-	  <<table>
-	  <tbody>
-	  <tr>
-	  <td width="29" class="page_center_button"><a class="page_center_buy" href="?page=home" title="buy"><span>buy</span></a><a class="page_center_info" href="?page=home" title="more info"><span>more-info</span></a></td>
-	  <td width="178" class="page_center_content">
-	  <div class="page_center_text"> <span class="blue2">Lorem ipsum dolor</span><br>
-	  <span class="gray">Donec at: justo ac</span><br>
-	  <span class="gray">Cras ut: ligula nec</span><br>
-	  <br>
-	  <span class="green">Price: $156</span><br>
-	  </div></td>
-	  <td width="144" class="page_center_img"> <img src="images/main1.jpg" alt="illustration image" width="126" height="125"  > </td>
-	  <td width="29" class="page_center_button"><a class="page_center_buy" href="?page=home" title="buy"><span>buy</span></a><a class="page_center_info" href="?page=home" title="more info"><span>more-info</span></a></td>
-	  <td width="178" class="page_center_content">
-	  <div class="page_center_text"> <span class="blue2">Lorem ipsum dolor</span><br>
-	  <span class="gray">Donec at: justo ac</span><br>
-	  <span class="gray">Cras ut: ligula nec</span><br>
-	  <br>
-	  <span class="green">Price: $156</span><br>
-	  </div></td>
-	  <td width="115" class="page_center_img2">&nbsp;</td>
-	  </tr>
-	  <tr>
-	  <td class="page_center_button"><a class="page_center_buy" href="?page=home" title="buy"><span>buy</span></a><a class="page_center_info" href="?page=home" title="more info"><span>more-info</span></a></td>
-	  <td class="page_center_content">
-	  <div class="page_center_text"> <span class="blue2">Free Gift</span><br>
-	  <span class="gray">AND Casual Top</span><br>
-	  <span class="gray">Item Number: 6112202_9100</span><br>
-	  <br>
-	  <span class="green">
-	    MRP Rs.1299.00</span> <br/>
-	  <br>
-	  <span class="green">Price: $156</span><br>
-	  </div></td>
-	  <td class="page_center_img"><span class="page_center_img2"><img src="images/main2.jpg" alt="illustration image" width="126" height="125" /></span></td>
-	  <td class="page_center_button"><a class="page_center_buy" href="?page=home" title="buy"><span>buy</span></a><a class="page_center_info" href="?page=home" title="more info"><span>more-info</span></a></td>
-	  <td class="page_center_content">
-	  <div class="page_center_text"> <span class="blue2">Lorem ipsum dolor</span><br>
-	  <span class="gray">Donec at: justo ac</span><br>
-	  <span class="gray">Cras ut: ligula nec</span><br>
-	  <br>
-	  <span class="green">Price: $156</span><br>
-	  </div></td>
-	  <td class="page_center_img2">&nbsp;</td>
-	  </tr>
-	  </tbody>
-	  </table>>
-	  </div>
-</div-->
+				  </p>
+		  	</div>
+		  <div id="Page_center">
+		  <<table>
+		  <tbody>
+		  <tr>
+		  <td width="29" class="page_center_button"><a class="page_center_buy" href="?page=home" title="buy"><span>buy</span></a><a class="page_center_info" href="?page=home" title="more info"><span>more-info</span></a></td>
+		  <td width="178" class="page_center_content">
+		  <div class="page_center_text"> <span class="blue2">Lorem ipsum dolor</span><br>
+		  <span class="gray">Donec at: justo ac</span><br>
+		  <span class="gray">Cras ut: ligula nec</span><br>
+		  <br>
+		  <span class="green">Price: $156</span><br>
+		  </div></td>
+		  <td width="144" class="page_center_img"> <img src="images/main1.jpg" alt="illustration image" width="126" height="125"  > </td>
+		  <td width="29" class="page_center_button"><a class="page_center_buy" href="?page=home" title="buy"><span>buy</span></a><a class="page_center_info" href="?page=home" title="more info"><span>more-info</span></a></td>
+		  <td width="178" class="page_center_content">
+		  <div class="page_center_text"> <span class="blue2">Lorem ipsum dolor</span><br>
+		  <span class="gray">Donec at: justo ac</span><br>
+		  <span class="gray">Cras ut: ligula nec</span><br>
+		  <br>
+		  <span class="green">Price: $156</span><br>
+		  </div></td>
+		  <td width="115" class="page_center_img2">&nbsp;</td>
+		  </tr>
+		  <tr>
+		  <td class="page_center_button"><a class="page_center_buy" href="?page=home" title="buy"><span>buy</span></a><a class="page_center_info" href="?page=home" title="more info"><span>more-info</span></a></td>
+		  <td class="page_center_content">
+		  <div class="page_center_text"> <span class="blue2">Free Gift</span><br>
+		  <span class="gray">AND Casual Top</span><br>
+		  <span class="gray">Item Number: 6112202_9100</span><br>
+		  <br>
+		  <span class="green">
+		    MRP Rs.1299.00</span> <br/>
+		  <br>
+		  <span class="green">Price: $156</span><br>
+		  </div></td>
+		  <td class="page_center_img"><span class="page_center_img2"><img src="images/main2.jpg" alt="illustration image" width="126" height="125" /></span></td>
+		  <td class="page_center_button"><a class="page_center_buy" href="?page=home" title="buy"><span>buy</span></a><a class="page_center_info" href="?page=home" title="more info"><span>more-info</span></a></td>
+		  <td class="page_center_content">
+		  <div class="page_center_text"> <span class="blue2">Lorem ipsum dolor</span><br>
+		  <span class="gray">Donec at: justo ac</span><br>
+		  <span class="gray">Cras ut: ligula nec</span><br>
+		  <br>
+		  <span class="green">Price: $156</span><br>
+		  </div></td>
+		  <td class="page_center_img2">&nbsp;</td>
+		  </tr>
+		  </tbody>
+		  </table>>
+		  </div>
+	</div-->
+	</div>
 </div>
 	<div class="cleaner">
 	</div>
@@ -226,8 +208,6 @@ ipsum</span></a><br>
 <div class="down2">
 <p> <a href="http://validator.w3.org/check?uri=referer"><img src="http://www.w3.org/Icons/valid-xhtml11" alt="Valid XHTML 1.1" height="31" width="88"></a>
 </p>-->
-</div>
-</div>
 </div>
 </div>
 </div>
