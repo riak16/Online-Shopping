@@ -273,7 +273,7 @@ include("toy.php");
 <div class="cleaner"></div>
 </div>
 <div id="Bottom">
-<p class="down"><b>Copyright &copy; Fashion Shop, Design by:Priya Gupta</b></p>
+<p class="down"><b>Bottom</b></p>
 
 </div>
 </div>
