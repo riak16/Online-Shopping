@@ -1,10 +1,23 @@
-	
-	
-	<html>
+  
+  
+<html>
 
 <div><br/><center><h2><font face="Lucida Handwriting" size="+1" color="#00CCFF">Dresses</font></h2></center></div>
+<div align="center">
+<img src="images/dress1.JPG">
+<img src="images/dress2.JPG">
+<img src="images/dress3.JPG"><br>
+
+<img src="images/dress4.JPG">
+<img src="images/dress5.JPG">
+<img src="images/dress6.JPG"><br>
+
+<img src="images/dress7.JPG" >
+<img src="images/dress8.JPG">
+<img src="images/dress9.JPG"><br>
+</div>
 <div style="width:100%;float:left" >
-<?php
+<!--?php
 
 include("config.php");
 
@@ -19,9 +32,9 @@ $subcatg=$_REQUEST['subcatg'];
    {
    $i=$arr['itemno'];
     if($n%4==0)
-	{
-	echo "<tr>";
-	}
+  {
+  echo "<tr>";
+  }
    echo "
    <td height='280' width='240' align='center'><img src='admin/itempics/$i.jpg' height='200' width='200'><br/>
   
@@ -34,18 +47,28 @@ $subcatg=$_REQUEST['subcatg'];
   $n++;
 
    }
-   	  echo "</tr></table>
+      echo "</tr></table>
        </form>";
-	?>
-  <div><br>
-<marquee behavior="scroll"  dir="ltr" align="absbottom"><img src="usepics/logo5.jpg" width="100" height="70"/>
-<img src="usepics/logo11.jpg" width="100" height="70"/>
-<img src="usepics/logo12.jpg" width="100" height="70"/><img src="usepics/logo8.jpg" width="100" height="70"/><img src="usepics/logo6.jpg" width="100" height="70"/>
-<img src="usepics/logo4.jpg" width="100" height="70"/>
-<img src="usepics/logo3.jpg" width="100" height="70"/>
+  ?-->
 
-<img src="usepics/logo13.jpg" width="100" height="70"/> <img src="usepics/logo15.jpg" width="100" height="70"/>
-<img src="usepics/logo1.jpg" width="100" height="70"/> <img src="usepics/logo2.jpg" width="100" height="70"/><img src="usepics/logo14.jpg" width="100" height="70"/><img src="usepics/logo9.jpg" width="100" height="70"/>
+
+  
+  <div><br>
+<marquee behavior="scroll"  dir="ltr" align="absbottom">
+<img src="usepics/logo_zara.jpg" width="100" height="70"/>
+<img src="usepics/logo_veromoda.png" width="100" height="70"/>
+<img src="usepics/logo_w.jpg" width="100" height="70"/>
+<img src="usepics/logo_aby.png" width="100" height="70"/>
+<img src="usepics/logo_madame.jpg" width="100" height="70"/>
+<img src="usepics/logo_ucb.jpg" width="100" height="70"/>
+<img src="usepics/logo_f21.png" width="100" height="70"/>
+<img src="usepics/logo_levis.jpg" width="100" height="70"/> 
+<img src="usepics/logo_mango.jpg" width="100" height="70"/>
+<img src="usepics/logo_th.jpg" width="100" height="70"/>
+<img src="usepics/logo_biba.png" width="100" height="70"/>
+<img src="usepics/logo_aero.png" width="100" height="70"/>
+<img src="usepics/logo_hm.png" width="100" height="70"/>
+
 </marquee>
 </div>
 </div>

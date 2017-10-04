@@ -2,7 +2,20 @@
 
 <div><br/><center><h2><font face="Lucida Handwriting" size="+1" color="#00CCFF">Casual Shirts</font></h2></center></div>
 <div style="width:100%;float:left" >
-<?php
+<div align="center">
+<img src="images/shirt1.JPG" >
+<img src="images/shirt2.JPG">
+<img src="images/shirt3.JPG"><br>
+
+<img src="images/shirt4.JPG">
+<img src="images/shirt5.JPG">
+<img src="images/shirt6.JPG"><br>
+
+<img src="images/shirt7.JPG" >
+<img src="images/shirt8.JPG">
+<img src="images/shirt9.JPG"><br>
+</div>
+<!--?php
 
 include("config.php");
 $dress=$_REQUEST['dress'];
@@ -34,16 +47,18 @@ $subcatg=$_REQUEST['subcatg'];
    }
    	  echo "</tr></table>
        </form>";
-	?>
+	?-->
 <div><br>
-<marquee behavior="scroll"  dir="ltr" align="absbottom"><img src="usepics/logo5.jpg" width="100" height="70"/>
-<img src="usepics/logo11.jpg" width="100" height="70"/>
-<img src="usepics/logo12.jpg" width="100" height="70"/><img src="usepics/logo8.jpg" width="100" height="70"/><img src="usepics/logo6.jpg" width="100" height="70"/>
-<img src="usepics/logo4.jpg" width="100" height="70"/>
-<img src="usepics/logo3.jpg" width="100" height="70"/>
+<marquee behavior="scroll"  dir="ltr" align="absbottom">
+<img src="usepics/logo_zara.jpg" width="100" height="70"/>
 
-<img src="usepics/logo13.jpg" width="100" height="70"/> <img src="usepics/logo15.jpg" width="100" height="70"/>
-<img src="usepics/logo1.jpg" width="100" height="70"/> <img src="usepics/logo2.jpg" width="100" height="70"/><img src="usepics/logo14.jpg" width="100" height="70"/><img src="usepics/logo9.jpg" width="100" height="70"/>
+<img src="usepics/logo_ucb.jpg" width="100" height="70"/>
+<img src="usepics/logo_f21.png" width="100" height="70"/>
+<img src="usepics/logo_levis.jpg" width="100" height="70"/> 
+<img src="usepics/logo_mango.jpg" width="100" height="70"/>
+<img src="usepics/logo_th.jpg" width="100" height="70"/>
+<img src="usepics/logo_aero.png" width="100" height="70"/>
+<img src="usepics/logo_hm.png" width="100" height="70"/>
 </marquee>
 </div>
 	</div>
