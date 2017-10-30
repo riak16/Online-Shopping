@@ -1,0 +1,36 @@
+button {
+  
+  border-radius: 2px;
+  display: inline-block;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  font-family: Arial;
+  font-size: inherit;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: rgb(178, 62, 53) 0px 1px 0px;
+  width: 130px;
+  height: 30px;
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-bottom: 100px;
+}
+#buy{
+  background: #20bd99;
+  border: 1px solid #20bd99;
+}
+#view{
+  background: #535766;
+  border: 1px solid #535766;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+h3{
+  color: #696e79;
+}
+body{
+  background-image: url('');
+}

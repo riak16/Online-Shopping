@@ -1,45 +1,45 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cz"><head>
-<title>Company name - title</title>
-
-<meta http-equiv="Content-language" content="cs">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="description" content=" ">
-<meta name="keywords" content=" ">
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-<link rel="icon" href="favicon.ico" type="image/x-icon">
-<meta name="author" content="Kl?ra Frolichov?, Sunlight webdesign">
-<meta name="Copyright" content="Kl?ra Frolichov?, Sunlight webdesign 2007">
-<meta name="design" content="Sunlight webdesign - http://www.sunlight.cz, info@sunlight.cz">
-<link rel="stylesheet" type="text/css" href="default.css" title="default">
-<script>
-	function abc()
-	{
-		var arr=new Array(
-			"https://www.thelocal.dk/userdata/images/article/b4cb2f8e03da8c0b383c63b3e24675ad1cda2afe9284f7891dd0f7ff53fd1947.jpg",
-			"https://assets.tatacliq.com/medias/sys_master/images/11308428263454.jpg",
-			"https://assets.tatacliq.com/medias/sys_master/images/11308434587678.jpg",
-			"https://i.pinimg.com/originals/09/1b/7b/091b7b810d71b6abbbf00623a3143389.jpg",
-			"https://images-eu.ssl-images-amazon.com/images/G/02/AMAZON-FASHION/BRANDS/HACKETT/AW17/BRANDSHOP-HACKETT_BOYS_UK",
-			"http://www.jsjewelrystudio.com/public/V2.0/brands/skeleton/images/3000466_0.jpg",
-			"https://i.pinimg.com/originals/df/b0/5a/dfb05a452dbf73426dceb9e1678ea4f7.jpg",
-			"https://images-eu.ssl-images-amazon.com/images/G/02/AMAZON-FASHION/2016/WATCHES/TRADEMARKETING/BRANDSTORES/FOSSIL/EMPORIOARMANIUK/ea_sp17_d_sis_b_amazon_main_banner_1500x500px_en._V533409481_.jpg",
-			"https://cdn.shopify.com/s/files/1/0342/7009/files/easter-baby-desktop_2048x.jpg?v=1490024537",
-			"https://images-eu.ssl-images-amazon.com/images/G/02/AMAZON-FASHION/2017/BRANDS/VANS/Vans_SP17_Amazon_brand_1500x500.jpg",
-			"https://assets.tatacliq.com/medias/sys_master/images/11168200163358.jpg",
-			"http://www.fashiontrendsetter.com/v2/wp-content/uploads/2016/09/TOMMYGIGI.jpg"
-			);
-		var ind=eval(document.f1.index.value);
-		var slide=document.getElementById("slide");
-		slide.src=arr[ind];
-		document.f1.index.value=ind+1;
-		if(document.f1.index.value==arr.length)
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Company name - title</title>
+	<meta http-equiv="Content-language" content="cs">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="description" content=" ">
+	<meta name="keywords" content=" ">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<meta name="author" content="Kl?ra Frolichov?, Sunlight webdesign">
+	<meta name="Copyright" content="Kl?ra Frolichov?, Sunlight webdesign 2007">
+	<meta name="design" content="Sunlight webdesign - http://www.sunlight.cz, info@sunlight.cz">
+	<link rel="stylesheet" type="text/css" href="default.css" title="default">
+	<script>
+		function abc()
 		{
-			document.f1.index.value=0;
+			var arr=new Array(
+				"https://www.thelocal.dk/userdata/images/article/b4cb2f8e03da8c0b383c63b3e24675ad1cda2afe9284f7891dd0f7ff53fd1947.jpg",
+				"https://assets.tatacliq.com/medias/sys_master/images/11308428263454.jpg",
+				"https://assets.tatacliq.com/medias/sys_master/images/11308434587678.jpg",
+				"https://i.pinimg.com/originals/09/1b/7b/091b7b810d71b6abbbf00623a3143389.jpg",
+				"https://images-eu.ssl-images-amazon.com/images/G/02/AMAZON-FASHION/BRANDS/HACKETT/AW17/BRANDSHOP-HACKETT_BOYS_UK",
+				"http://www.jsjewelrystudio.com/public/V2.0/brands/skeleton/images/3000466_0.jpg",
+				"https://i.pinimg.com/originals/df/b0/5a/dfb05a452dbf73426dceb9e1678ea4f7.jpg",
+				"https://images-eu.ssl-images-amazon.com/images/G/02/AMAZON-FASHION/2016/WATCHES/TRADEMARKETING/BRANDSTORES/FOSSIL/EMPORIOARMANIUK/ea_sp17_d_sis_b_amazon_main_banner_1500x500px_en._V533409481_.jpg",
+				"https://cdn.shopify.com/s/files/1/0342/7009/files/easter-baby-desktop_2048x.jpg?v=1490024537",
+				"https://images-eu.ssl-images-amazon.com/images/G/02/AMAZON-FASHION/2017/BRANDS/VANS/Vans_SP17_Amazon_brand_1500x500.jpg",
+				"https://assets.tatacliq.com/medias/sys_master/images/11168200163358.jpg",
+				"http://www.fashiontrendsetter.com/v2/wp-content/uploads/2016/09/TOMMYGIGI.jpg"
+				);
+			var ind=eval(document.f1.index.value);
+			var slide=document.getElementById("slide");
+			slide.src=arr[ind];
+			document.f1.index.value=ind+1;
+			if(document.f1.index.value==arr.length)
+			{
+				document.f1.index.value=0;
+			}
 		}
-	}
-	setInterval("abc()",2000);
-</script>
+		setInterval("abc()",2000);
+	</script>
 </head>
 
 
@@ -86,16 +86,16 @@
 					<input type="text" name="t1" value="Search" onclick="this.value=''" onBlur="if(this.value==''){this.value='search';}"/>
 					<button type="submit">Go!</button>
 				</div>
-				<a class="top_menu_item" href="?page=home">HOME</a>
-				<a class="top_menu_item" href="?page=home">CART</a> 
-				<a class="top_menu_item" href="?page=home">ORDERS</a>
-				<a class="top_menu_item" href="?page=home">CONTACT</a>
-				<a class="top_menu_item" href="help.html">HELP</a>
+				<a class="top_menu_item" href="">HOME</a>
+				<a class="top_menu_item" href="">CART</a> 
+				<a class="top_menu_item" href="">ORDERS</a>
+				<a class="top_menu_item" href="#">CONTACT</a>
+				<a class="top_menu_item" href="#">HELP</a>
 				
 			</div>
 		</div>
 	</div>
-	<div id="Page"><img id="slide" src="http://www.fashiontrendsetter.com/v2/wp-content/uploads/2016/09/TOMMYGIGI.jpg" alt="Ads" width="1340px" height="500px" name="img"/>
+	<div id="Page"><img id="slide" src="http://www.fashiontrendsetter.com/v2/wp-content/uploads/2016/09/TOMMYGIGI.jpg" alt="Ads" width="1280px" height="500px" name="img"/>
 		<form name="f1">
 			<input type="hidden" name="index" value="0" />
 		</form>
@@ -150,60 +150,6 @@
 		</div>
 	</div>
 
-
-<?php
-/*if($_REQUEST['search'])
-{
-	include("search.php");
-}
-if($_REQUEST['con']==1)
-{
-	include("contact.php");
-}
-if($_REQUEST['con']==2)
-{
-	include("about.php");
-}
-if($_REQUEST['con']==3)
-{
-	include("gallery.php");
-}
-if($_REQUEST['con']==11)
-{
-	include("register.php");
-}
-if($_REQUEST['con']==12)
-{
-	include("login.php");
-}
-
-if($_REQUEST['con']==13)
-{
-	include("welcome.php");
-}
-if($_REQUEST['con']==14)
-{
-	include("viewitem.php");
-}
-
-if($_REQUEST['catg']==1)
-{
-
-
-}
-
-
-
-
-}
-if($_REQUEST['catg']==3)
-{
-if($_REQUEST['subcatg']=='Kids Toys')
-{
-include("toy.php");
-}
-}*/
-?>
 <div class="cleaner"></div>
 <div id="Bottom">
 <p class="down"><b>Bottom</b></p>

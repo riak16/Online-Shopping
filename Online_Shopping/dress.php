@@ -1,23 +1,15 @@
   
   
 <html>
+<head>
+<title>Dresses</title>
+<link rel="stylesheet" type="text/css" href="item.css" title="default">
+</head>
+<body>
 
 <div><br/><center><h2><font face="Lucida Handwriting" size="+1" color="#00CCFF">Dresses</font></h2></center></div>
-<div align="center">
-<img src="images/dress1.JPG">
-<img src="images/dress2.JPG">
-<img src="images/dress3.JPG"><br>
-
-<img src="images/dress4.JPG">
-<img src="images/dress5.JPG">
-<img src="images/dress6.JPG"><br>
-
-<img src="images/dress7.JPG" >
-<img src="images/dress8.JPG">
-<img src="images/dress9.JPG"><br>
-</div>
 <div style="width:100%;float:left" >
-<!--?php
+<?php
 
 include("config.php");
 
@@ -26,34 +18,34 @@ $subcatg=$_REQUEST['subcatg'];
 
 
    $sel=mysql_query("select * from items where catg='$catg' and subcatg='$subcatg'");
-   echo"<form method='post'><table border='0' align='center'><tr>";
-   $n=1;
+   echo"<form><table border='0' align='center'><tr>";
+   $n=0;
     while($arr=mysql_fetch_array($sel))
    {
    $i=$arr['itemno'];
-    if($n%4==0)
+    if($n%3==0)
   {
   echo "<tr>";
   }
    echo "
-   <td height='280' width='240' align='center'><img src='admin/itempics/$i.jpg' height='200' width='200'><br/>
-  
- <b>Item No:</b>".$arr['itemno'].
-   "<br><b>Price:</b>Rs&nbsp;".$arr['price'].
-   "<br><b>Description:</b>".$arr['desc'].
-   "<br><br><a href='index.php?con=12 & itemno=$i'><img src='images/MetalPlakDa5new.gif' width='70' height='20'/></a>
-      <a href='index.php?con=14 & itemno=$i'><img src='images/view7.jpg' width='70' height='20'/></a>
+   <td height='500' width='300' align='center'><img src='admin/itempics/$i.jpg' height='400' width='270'>
+  <h3>Price: Rs&nbsp;".$arr['price'].
+   "</h3>
+   <a href='index.php?con=12 & itemno=$i'><button id ='buy'> BUY </button> </a>
+   <a href='view.php?catg=2 & subcatg=dresses & itemno=$i'><button id ='view'> VIEW </button> </a>
    </td>";
   $n++;
 
    }
       echo "</tr></table>
        </form>";
-  ?-->
+  ?>
+  </div>
 
 
   
-  <div><br>
+  <div>
+  <br>
 <marquee behavior="scroll"  dir="ltr" align="absbottom">
 <img src="usepics/logo_zara.jpg" width="100" height="70"/>
 <img src="usepics/logo_veromoda.png" width="100" height="70"/>
