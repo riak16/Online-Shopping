@@ -2,15 +2,6 @@
 <html>
 <head>
 	<title>Company name - title</title>
-	<meta http-equiv="Content-language" content="cs">
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta name="description" content=" ">
-	<meta name="keywords" content=" ">
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-	<link rel="icon" href="favicon.ico" type="image/x-icon">
-	<meta name="author" content="Kl?ra Frolichov?, Sunlight webdesign">
-	<meta name="Copyright" content="Kl?ra Frolichov?, Sunlight webdesign 2007">
-	<meta name="design" content="Sunlight webdesign - http://www.sunlight.cz, info@sunlight.cz">
 	<link rel="stylesheet" type="text/css" href="default.css" title="default">
 	<script>
 		function abc()
@@ -87,7 +78,7 @@
 					<button type="submit">Go!</button>
 				</div>
 				<a class="top_menu_item" href="">HOME</a>
-				<a class="top_menu_item" href="">CART</a> 
+				<a class="top_menu_item" href="cart.php?action=view">CART</a> 
 				<a class="top_menu_item" href="">ORDERS</a>
 				<a class="top_menu_item" href="#">CONTACT</a>
 				<a class="top_menu_item" href="#">HELP</a>
@@ -127,7 +118,7 @@
 				<a href ="" ><img src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/1873038/2017/4/27/11493284973088-next-Women-Jumpsuit-3761493284973075-1.jpg" alt="Ads" width="400px" height="500px" name="img"/></a>
 			</div>
 			<div id="Menu_content"> 
-				<a class="menu_item" href="dress.php?catg=2 & subcatg=dresses"><span>Dresses</span></a><br>
+				<a class="menu_item" href="dress.php?subcatg=dresses"><span>Dresses</span></a><br>
 				<a class="menu_item" href="suits.php?catg=2 & subcatg=Churidar Suits"><span>Churidar Suits</span></a><br>
 				<a class="menu_item" href="kurtas.php?catg=2 & subcatg=Kurtas"><span>Kurtas</span></a><br>
 				<a class="menu_item" href="sandals.php?catg=2 & subcatg=Sandals"><span>Sandals</span></a><br>

@@ -1,8 +1,11 @@
 <html>
-
+<head>
+<title>Jeans</title>
+<link rel="stylesheet" type="text/css" href="item.css" title="default">
+</head>
+<body>
 <div><br/><center><h2><font face="Lucida Handwriting" size="+1" color="#00CCFF">Jeans</font></h2></center></div>
-<div style="width:100%;float:left" >
-<?php
+<!-- <?php
 
 include("config.php");
 
@@ -34,20 +37,56 @@ $subcatg=$_REQUEST['subcatg'];
    }
    	  echo "</tr></table>
        </form>";
-	?>
+	?> -->
+  <?php
+      include 'config.php';
+      $catg=$_REQUEST['catg'];
+      $subcatg=$_REQUEST['subcatg'];
+      $sel=mysql_query("select * from items where catg='$catg' and subcatg='$subcatg'");
+      echo"<form><table border='0' align='center'>";
+      $n=0;
+      while($arr=mysql_fetch_array($sel))
+      {
+        $i=$arr['itemno'];
+        if($n%3==0)
+        {
+          echo "<tr>";
+        }
+        echo "
+        <td height='500' width='300' align='center'><img src='admin/itempics/$i.jpg' height='400' width='270'>
+        <h3>Price: Rs&nbsp;".$arr['price'].
+        "</h3>
+        <a href='index.php?con=12 & itemno=$i' id='buy'> BUY </a>
+        <a href='view.php?catg=2 & subcatg=dresses & itemno=$i' id='view'> VIEW  </a>
+        </td>";
+        if($n%3==2)
+        {
+          echo "</tr>";
+        }
+        $n++;
+
+
+      }
+        echo "</tr></table>
+         </form>";
+      ?>
   <div><br>
-<marquee behavior="scroll"  dir="ltr" align="absbottom"><img src="usepics/logo5.jpg" width="100" height="70"/>
-<img src="usepics/logo11.jpg" width="100" height="70"/>
-<img src="usepics/logo12.jpg" width="100" height="70"/><img src="usepics/logo8.jpg" width="100" height="70"/><img src="usepics/logo6.jpg" width="100" height="70"/>
-<img src="usepics/logo4.jpg" width="100" height="70"/>
-<img src="usepics/logo3.jpg" width="100" height="70"/>
-
-<img src="usepics/logo13.jpg" width="100" height="70"/> <img src="usepics/logo15.jpg" width="100" height="70"/>
-<img src="usepics/logo1.jpg" width="100" height="70"/> <img src="usepics/logo2.jpg" width="100" height="70"/><img src="usepics/logo14.jpg" width="100" height="70"/><img src="usepics/logo9.jpg" width="100" height="70"/>
-</marquee>
+<marquee behavior="scroll"  dir="ltr" align="absbottom">
+    <img src="usepics/logo_zara.jpg" width="100" height="70"/>
+    <img src="usepics/logo_veromoda.png" width="100" height="70"/>
+    <img src="usepics/logo_w.jpg" width="100" height="70"/>
+    <img src="usepics/logo_aby.png" width="100" height="70"/>
+    <img src="usepics/logo_madame.jpg" width="100" height="70"/>
+    <img src="usepics/logo_ucb.jpg" width="100" height="70"/>
+    <img src="usepics/logo_f21.png" width="100" height="70"/>
+    <img src="usepics/logo_levis.jpg" width="100" height="70"/> 
+    <img src="usepics/logo_mango.jpg" width="100" height="70"/>
+    <img src="usepics/logo_th.jpg" width="100" height="70"/>
+    <img src="usepics/logo_biba.png" width="100" height="70"/>
+    <img src="usepics/logo_aero.png" width="100" height="70"/>
+    <img src="usepics/logo_hm.png" width="100" height="70"/>
+  </marquee>
 </div>
-</div>
-
 </body>
 </html>
 

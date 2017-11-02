@@ -29,8 +29,8 @@ $subcatg=$_REQUEST['subcatg'];
    <td height='500' width='300' align='center'><img src='admin/itempics/$i.jpg' height='400' width='270'>
   <h3>Price: Rs&nbsp;".$arr['price'].
    "</h3>
-   <a href='index.php?con=12 & itemno=$i'><button id ='buy'> BUY </button> </a>
-   <a href='view.php?catg=1 & subcatg=Casual Shirts & itemno=$i'><button id ='view'> VIEW </button> </a>
+   <a href='index.php?con=12 & itemno=$i' id ='buy'> BUY </a>
+   <a href='view.php?catg=1 & subcatg=Casual Shirts & itemno=$i' id ='view'> VIEW </a>
    </td>";
   $n++;
 
