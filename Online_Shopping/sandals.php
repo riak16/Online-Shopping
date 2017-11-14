@@ -2,9 +2,23 @@
 <head>
 <title>Shoes</title>
 <link rel="stylesheet" type="text/css" href="item.css" title="default">
+<!-- CSS -->        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400|Roboto:300,400,500">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/animate.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="assets/ico/favicon.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
 </head>
 <body>
-<div><br/><center><h2><font face="Lucida Handwriting" size="+1" color="#00CCFF">Shoes</font></h2></center></div>
+<?php include("navbar.html"); ?>
+<div><br/><center><h2><font face="Lucida Handwriting" color="#00CCFF">Shoes</font></h2></center></div>
 <div style="width:100%;float:left" >
 <?php
       include 'config.php';
@@ -59,6 +73,23 @@
   </marquee>
 </div>
 	</div>
+  <style type="text/css">
+  a{
+  text-decoration: none;
+  color: white;
+  border-radius:2px;
+  font-family: Arial;
+  font-size: inherit;
+  font-weight: bold;
+  padding: 10px;
+  margin-right: 10px;
+  padding-right: 40px;
+  padding-left: 40px;
+  /*margin-right:10px;
+  padding:10px 10px 10px 10px;*/
+
+}
+</style>
 </body>
 </html>
 

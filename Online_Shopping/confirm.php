@@ -64,7 +64,7 @@
         <div class="col-xs-12">
             <div class="col-md-12">
                 <h3> Step 3</h3>
-                <button class="btn btn-success btn-lg pull-right" type="submit">Finish!</button>
+                <button class="btn btn-success btn-lg pull-right" type="button" onclick="location.href='http://localhost/Online-Shopping/Online_Shopping/placed.php';">Finish!</button>
             </div>
         </div>
     </div>

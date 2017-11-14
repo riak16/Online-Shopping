@@ -88,12 +88,12 @@ if(!empty($_GET["action"])) {
           <a class="dropdown-item" href="cart.php?action=empty">Empty Cart</a>
           <a class="dropdown-item" href="cart.php?action=view">View Mode</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Share Cart</a>
+          <a class="dropdown-item" href="https://www.facebook.com/login‎">Share Cart</a>
         </div>
       </li>
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
+      </li> -->
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">

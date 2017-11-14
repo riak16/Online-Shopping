@@ -52,7 +52,7 @@
 <div id="WholePage">
 <div id="Inner">
 <div id="Container">
-	<div id="Page"><img id="slide" src="http://www.fashiontrendsetter.com/v2/wp-content/uploads/2016/09/TOMMYGIGI.jpg" alt="Ads" width="1300px" height="600px" name="img"/>
+	<div id="Page"><img id="slide" src="http://www.fashiontrendsetter.com/v2/wp-content/uploads/2016/09/TOMMYGIGI.jpg" alt="Ads" width="1290px" height="550px" name="img"/>
 		<form name="f1">
 			<input type="hidden" name="index" value="0" />
 		</form>
@@ -85,7 +85,7 @@
 			</div>
 			<div id="Menu_content"> 
 				<a class="menu_item" href="dress.php?subcatg=dresses"><span>Dresses</span></a><br>
-				<a class="menu_item" href="kurtas.php?subcatg=kurti"><span>Churidar Suits</span></a><br>
+				<a class="menu_item" href="kurtas.php?subcatg=kurti"><span>Traditionals</span></a><br>
 				<!-- <a class="menu_item" href="kurtas.php?subcatg=Kurtas"><span>Kurtas</span></a><br> -->
 				<a class="menu_item" href="sandals.php?subcatg=gfootwear"><span>Footwear</span></a><br>
 				<a class="menu_item" href="office.php?subcatg=Office Wear"><span>Office Wear</span></a><br>
@@ -102,7 +102,7 @@
 				<a class="menu_item" href="baby.php?subcatg=kids"><span>Dress</span></a><br>
 				<a class="menu_item" href="girls.php?subcatg=Girls Apparel"><span>Girls Apparel</span></a><br>
 				<a class="menu_item" href="boy.php?subcatg=Boys Apparel"><span>Boys Apparel</span></a><br>
-				<a class="menu_item" href="toy.phpsubcatg=Kids Toys"><span>Kids Toys</span></a><br>
+				<a class="menu_item" href="toy.php?subcatg=Kids Toys"><span>Kids Toys</span></a><br>
 			</div>
 		</div>
 	</div>
