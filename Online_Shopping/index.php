@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Company name - title</title>
+	<title>Shop</title>
 	<link rel="stylesheet" type="text/css" href="default.css" title="default">
 	<script>
 		function abc()
@@ -31,62 +31,28 @@
 		}
 		setInterval("abc()",2000);
 	</script>
+	<!-- CSS -->        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400|Roboto:300,400,500">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/animate.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="assets/ico/favicon.png">
+        <!-- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"> -->
 </head>
 
 
 <body>
-<!--div id="Menu_content"> <<a class="menu_item" href="?page=home"><span>>< Start of Page Search >
-
-		
-		    <h5>&nbsp;</h5>
-			<form method="post">
-		    <input type="text" name="t1" value="search" onfocus="if(this.value=='search'){this.value='';}"onBlur="if(this.value==''){this.value='search';}"/>
-            <input name="sear" type="submit" class="button" id="sub" value="Go" />
-</form-->
-<!--?php
-	if($_REQUEST['sear'])
-	  {
-	   $se=$_REQUEST['t1'];
-	   if($se!=NULL)
-	   {
-	   echo "<script>location.href='index.php?se=$se'</script>";
-	   }
-        }
-?>
-		
-
-		  <h5>&nbsp;</h5>
-		  <!--</form>>
-		
-
-		< End of Page Search ></span></a><br>
-</div-->
+<?php include("navbar.html"); ?>
 <div id="WholePage">
 <div id="Inner">
 <div id="Container">
-	<div id="Head">
-		<div id="Head_left">
-			<div id="Logo"> 
-				<a class="registration" href="register.html">REGISTRATION</a> 
-				<a class="log-in" href="login.html">LOG IN</a>
-			</div>
-		</div>
-		<div id="Head_right">
-			<div id="Top_menu"> 
-				<div id="search">
-					<input type="text" name="t1" value="Search" onclick="this.value=''" onBlur="if(this.value==''){this.value='search';}"/>
-					<button type="submit">Go!</button>
-				</div>
-				<a class="top_menu_item" href="">HOME</a>
-				<a class="top_menu_item" href="cart.php?action=view">CART</a> 
-				<a class="top_menu_item" href="">ORDERS</a>
-				<a class="top_menu_item" href="#">CONTACT</a>
-				<a class="top_menu_item" href="#">HELP</a>
-				
-			</div>
-		</div>
-	</div>
-	<div id="Page"><img id="slide" src="http://www.fashiontrendsetter.com/v2/wp-content/uploads/2016/09/TOMMYGIGI.jpg" alt="Ads" width="1280px" height="500px" name="img"/>
+	<div id="Page"><img id="slide" src="http://www.fashiontrendsetter.com/v2/wp-content/uploads/2016/09/TOMMYGIGI.jpg" alt="Ads" width="1300px" height="600px" name="img"/>
 		<form name="f1">
 			<input type="hidden" name="index" value="0" />
 		</form>
@@ -100,12 +66,12 @@
 				<a href ="" ><img src="https://i.pinimg.com/736x/56/90/6b/56906bf1d22f9300c853546a08870a22--blue-blazer-outfit-blazer-outfits-men.jpg" alt="Men categories" width="400px" height="500px" name="img"/></a>
 			</div>
 			<div id="Menu_content"> 
-				<a class="menu_item" href="casual.php?catg=1 & subcatg=Casual Shirts"><span>Casual Shirts</span></a><br>
-				<a class="menu_item" href="jeans.php?catg=1 & subcatg=Jeans"><span>Jeans</span></a><br>
-				<a class="menu_item" href="tshirt.php?catg=1 & subcatg=T-Shirts"><span>T-shirts</span></a><br>
-				<a class="menu_item" href="shoe.php?catg=1 & subcatg=Footwear"><span>Footwear</span></a><br>
-				<a class="menu_item" href="shorts.php?catg=1 & subcatg=Shorts"><span>Shorts</span></a><br>
-				<a class="menu_item" href="watch.php?catg=1 & subcatg=watches"><span>Watches
+				<a class="menu_item" href="casual.php?subcatg=Casual Shirts"><span>Casual Shirts</span></a><br>
+				<a class="menu_item" href="jeans.php?subcatg=Jeans"><span>Jeans</span></a><br>
+				<a class="menu_item" href="tshirt.php?subcatg=ts"><span>T-shirts</span></a><br>
+				<a class="menu_item" href="shoe.php?subcatg=Footwear"><span>Footwear</span></a><br>
+				<a class="menu_item" href="shorts.php?subcatg=Shorts"><span>Shorts</span></a><br>
+				<a class="menu_item" href="watch.php?subcatg=watches"><span>Watches
 				</span></a><br>
 
 			</div>
@@ -119,11 +85,11 @@
 			</div>
 			<div id="Menu_content"> 
 				<a class="menu_item" href="dress.php?subcatg=dresses"><span>Dresses</span></a><br>
-				<a class="menu_item" href="suits.php?catg=2 & subcatg=Churidar Suits"><span>Churidar Suits</span></a><br>
-				<a class="menu_item" href="kurtas.php?catg=2 & subcatg=Kurtas"><span>Kurtas</span></a><br>
-				<a class="menu_item" href="sandals.php?catg=2 & subcatg=Sandals"><span>Sandals</span></a><br>
-				<a class="menu_item" href="office.php?catg=2 & subcatg=Office Wear"><span>Office Wear</span></a><br>
-				<a class="menu_item" href="jewel.php?catg=2 & subcatg=Artificial Jewellery"><span>Artificial Jewellery</span></a><br>
+				<a class="menu_item" href="kurtas.php?subcatg=kurti"><span>Churidar Suits</span></a><br>
+				<!-- <a class="menu_item" href="kurtas.php?subcatg=Kurtas"><span>Kurtas</span></a><br> -->
+				<a class="menu_item" href="sandals.php?subcatg=gfootwear"><span>Footwear</span></a><br>
+				<a class="menu_item" href="office.php?subcatg=Office Wear"><span>Office Wear</span></a><br>
+				<a class="menu_item" href="jewel.php?subcatg=Artificial Jewellery"><span>Artificial Jewellery</span></a><br>
 			</div>
 		</div>
 		<div id = "RightPart">
@@ -133,20 +99,16 @@
 				<a href ="" ><img src="https://i.pinimg.com/736x/c1/ed/ae/c1edae728451f5c0fe3b741737b08104--pyjamas-online-kids-pajamas.jpg" alt="Ads" width="400px" height="500px" name="img"/></a>
 			</div>
 			<div id="Menu_content">
-				<a class="menu_item" href="baby.php?catg=3 & subcatg=Baby Apparel"><span>Baby Apparel</span></a><br>
-				<a class="menu_item" href="girls.php?catg=3 & subcatg=Girls Apparel"><span>Girls Apparel</span></a><br>
-				<a class="menu_item" href="boy.php?catg=3 & subcatg=Boys Apparel"><span>Boys Apparel</span></a><br>
-				<a class="menu_item" href="toy.php?catg=3 & subcatg=Kids Toys"><span>Kids Toys</span></a><br>
+				<a class="menu_item" href="baby.php?subcatg=kids"><span>Dress</span></a><br>
+				<a class="menu_item" href="girls.php?subcatg=Girls Apparel"><span>Girls Apparel</span></a><br>
+				<a class="menu_item" href="boy.php?subcatg=Boys Apparel"><span>Boys Apparel</span></a><br>
+				<a class="menu_item" href="toy.phpsubcatg=Kids Toys"><span>Kids Toys</span></a><br>
 			</div>
 		</div>
 	</div>
 
-<div class="cleaner"></div>
-<div id="Bottom">
-<p class="down"><b>Bottom</b></p>
 
 </div>
-
 </div>
 </div>
 

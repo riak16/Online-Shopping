@@ -2,41 +2,62 @@
 <head>
 <title>Casual Shirts</title>
 <link rel="stylesheet" type="text/css" href="item.css" title="default">
+
+<!-- CSS -->        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400|Roboto:300,400,500">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/animate.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="assets/ico/favicon.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
 </head>
 <body>
-
-<div><br/><center><h2><font face="Lucida Handwriting" size="+1" color="#00CCFF">Casual Shirts</font></h2></center></div>
+<?php include("navbar.html"); ?>
+<div><br/><center><h2><font face="Lucida Handwriting" color="#00CCFF">Casual Shirts</font></h2></center></div>
 <div style="width:100%;float:left" >
 <?php
 
 include("config.php");
-
-$catg=$_REQUEST['catg'];
 $subcatg=$_REQUEST['subcatg'];
 
 
-   $sel=mysql_query("select * from items where catg='$catg' and subcatg='$subcatg'");
-   echo"<form><table border='0' align='center'><tr>";
-   $n=0;
-    while($arr=mysql_fetch_array($sel))
-   {
-   $i=$arr['itemno'];
-    if($n%3==0)
+  $sel=mysql_query("select * from product where subcatg='$subcatg'");
+  echo"<form><table border='0' align='center'><tr>";
+  $n=0;
+  while($arr=mysql_fetch_array($sel))
   {
-  echo "<tr>";
-  }
-   echo "
-   <td height='500' width='300' align='center'><img src='admin/itempics/$i.jpg' height='400' width='270'>
-  <h3>Price: Rs&nbsp;".$arr['price'].
-   "</h3>
-   <a href='index.php?con=12 & itemno=$i' id ='buy'> BUY </a>
-   <a href='view.php?catg=1 & subcatg=Casual Shirts & itemno=$i' id ='view'> VIEW </a>
-   </td>";
-  $n++;
+    $i=$arr['image'];
+    $pId=$arr['productId'];
+    $price=$arr['price'];
+        $dis=$arr['discount'];
+        $oprice=$price-($dis*$price/100);
+    if($n%3==0)
+    {
+      echo "<tr>";
+    }
+    echo "
+    <td height='500' width='300' align='center'><img src='admin/itempics/$i.jpg' height='400' width='270'>
+    <h3>Price: Rs&nbsp;<strike>".$arr['price']."</strike>  ".$oprice.
+    "</h3>
+    <a href='cart.php?action=add & productId=$pId' id='buy'> BUY </a>
+    <a href='view.php?subcatg=$subcatg & pid=$pId' id='view'> VIEW  </a>
+    </td>";
+    if($n%3==2)
+    {
+      echo "</tr>";
+    }
+    $n++;
 
-   }
-      echo "</tr></table>
-       </form>";
+
+  }
+  echo "</tr></table>
+   </form>";
   ?>
   </div>
 <div><br>
@@ -53,6 +74,23 @@ $subcatg=$_REQUEST['subcatg'];
 </marquee>
 </div>
 	</div>
+<style type="text/css">
+  a{
+  text-decoration: none;
+  color: white;
+  border-radius:2px;
+  font-family: Arial;
+  font-size: inherit;
+  font-weight: bold;
+  padding: 10px;
+  margin-right: 10px;
+  padding-right: 40px;
+  padding-left: 40px;
+  /*margin-right:10px;
+  padding:10px 10px 10px 10px;*/
+
+}
+</style>
 </body>
 </html>
 

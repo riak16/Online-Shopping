@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 session_start();
 $id=$_SESSION['eid'];
 include("config.php");
@@ -23,16 +23,11 @@ if($_REQUEST['send'])
 	  
     }
 	
-if($_REQUEST['log']=='out')
-{
-session_destroy();
-header("location:index.php");
-}
-else if($id=="")
-{
-header("location:index.php");
-}
-	
+?> -->
+<?php
+  foreach ($_SESSION["cart_item"] as $item){
+      $sel=mysql_query("insert into orders values('$pname','$itemno','$price','$size','$uname','$ac_no','$mob_no','$add','$bank','$city','$order_no')");
+    }
 ?>
 <body>
 <div>
