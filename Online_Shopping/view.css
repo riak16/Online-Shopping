@@ -17,3 +17,31 @@ form{
   padding-left: 100px;
   padding-right: 200px;
 }
+#buyr{
+  background: #20bd99;
+  border: 1px solid #20bd99;
+  text-decoration: none;
+  color: white;
+  border-radius:2px;
+  font-family: Arial;
+  font-size: inherit;
+  font-weight: bold;
+  padding: 10px;
+  margin-right: 10px;
+  padding-right: 40px;
+  padding-left: 40px;
+}
+#viewr{
+  background: #535766;
+  border: 1px solid #535766;
+  text-decoration: none;
+  color: white;
+  border-radius:2px;
+  font-family: Arial;
+  font-size: inherit;
+  font-weight: bold;
+  padding: 10px;
+  margin-right: 10px;
+  padding-right: 40px;
+  padding-left: 40px;
+}

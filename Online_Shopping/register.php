@@ -17,6 +17,9 @@
         <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
         <script src="//code.angularjs.org/1.6.0/angular.min.js"></script>
         <script src="//code.angularjs.org/1.6.0/angular-route.min.js"></script>
+        <a href="index.php">
+        <center><img src="nouvelle.gif" height="250" width="250" ></center>
+        </a>
     <div class="login-page">
 
         <form class="login-form" name="loginform" action="register.php" ng-submit="angCtrl.loginForm()" class="form-horizontal" method="POST" novalidate>

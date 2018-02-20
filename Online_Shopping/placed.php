@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <html>
 <head>
 <title>Order Confirmed</title>
@@ -20,19 +23,19 @@
 <body>
 <?php include("navbar.html"); ?>
       <?php 
-        session_start();
         unset($_SESSION["cart_item"]);
       ?>
-      <img src='https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX8527776.jpg' height="600">
+      <!-- <img src='https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX8527776.jpg' height="600"> -->
+      <img src='img/placed.png' height="615" width="1200">
 
 </body>
-<!-- <style type="text/css">
+<style type="text/css">
   body{
-    background-image: url('https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX8527776.jpg');
+    background-image: url("img/placed.png");
     background-repeat: no-repeat;
     background-size: cover;
   }
-</style> -->
+</style>
 </html>
 
 

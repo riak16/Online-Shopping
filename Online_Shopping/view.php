@@ -26,10 +26,10 @@
 
 include("config.php");
 
-$subcatg=$_REQUEST['subcatg'];
+// $subcatg=$_REQUEST['subcatg'];
 $pId=$_REQUEST['pid'];
 
-   $sel=mysql_query("select * from product where subcatg='$subcatg' and productId='$pId'");
+   $sel=mysql_query("select * from product where productId='$pId'");
    echo"<form method='post'>";
   $arr=mysql_fetch_array($sel);
   $i=$arr['image'];
@@ -46,6 +46,107 @@ $pId=$_REQUEST['pid'];
        </form>";
   ?>
   </div>
+  <div><br/><center><h2><font face="Lucida Handwriting" color="#00CCFF">Recommendations</font></h2></center></div>
+    <?php
+      $rpid=shell_exec('amazon.py');
+    ?>
+    <?php
+      $rpid=$pId+2;
+      if($rpid%100>9){
+        $rpid=$rpid-$rpid%100;
+        $rpid++;
+      }
+      $sel=mysql_query("select * from product where productId='$rpid'");
+      echo"<form><table border='0' align='center' border-spacing=10px;>";
+      $n=0;
+      $rcount=0;
+      while($rcount<3)
+      { 
+        // echo $rpid."    rpid";
+        $arr=mysql_fetch_array($sel);
+        $i=$arr['image'];
+        $pId=$arr['productId'];
+        $price=$arr['price'];
+        $dis=$arr['discount'];
+        $oprice=$price-($dis*$price/100);
+        if($n%3==0)
+        {
+          echo "<tr>";
+        }
+        echo "
+        <td height='500' width='300' align='center'><img src='admin/itempics/$i.jpg' height='400' width='270'>
+        <h3>Price: Rs&nbsp;<strike>".$arr['price']."</strike>  ".$oprice.
+        "</h3>
+        <a href='cart.php?action=add & productId=$pId' id='buyr'> BUY </a>
+        <a href='view.php? pid=$pId' id='viewr'> VIEW  </a>
+        </td>";
+        if($n%3==2)
+        {
+          echo "</tr>";
+        }
+        $n++;
+        $rpid=$rpid+2;
+        if($rpid%100>9){
+          $rpid=$rpid-$rpid%100;
+          $rpid++;
+        }
+        $rcount++;
+        $sel=mysql_query("select * from product where productId='$rpid'");
+      }
+        echo "</tr></table>
+         </form>";
+      ?>
+      <?php
+      if($rpid%10000<3000){
+        $rpid=$pId+100;
+        if($rpid%1000>200){
+          $rpid=$rpid-200;
+        }
+        if($rpid%100>9){
+          $rpid=$rpid-$rpid%100;
+          $rpid++;
+        }
+        $sel=mysql_query("select * from product where productId='$rpid'");
+        echo"<form><table border='0' align='center' border-spacing=10px;>";
+        $n=0;
+        $rcount=0;
+        while($rcount<3)
+        { 
+          // echo $rpid."    rpid";
+          $arr=mysql_fetch_array($sel);
+          $i=$arr['image'];
+          $pId=$arr['productId'];
+          $price=$arr['price'];
+          $dis=$arr['discount'];
+          $oprice=$price-($dis*$price/100);
+          if($n%3==0)
+          {
+            echo "<tr>";
+          }
+          echo "
+          <td height='500' width='300' align='center'><img src='admin/itempics/$i.jpg' height='400' width='270'>
+          <h3>Price: Rs&nbsp;<strike>".$arr['price']."</strike>  ".$oprice.
+          "</h3>
+          <a href='cart.php?action=add & productId=$pId' id='buyr'> BUY </a>
+          <a href='view.php? pid=$pId' id='viewr'> VIEW  </a>
+          </td>";
+          if($n%3==2)
+          {
+            echo "</tr>";
+          }
+          $n++;
+          $rpid=$rpid+2;
+          if($rpid%100>9){
+            $rpid=$rpid-$rpid%100;
+            $rpid++;
+          }
+          $rcount++;
+          $sel=mysql_query("select * from product where productId='$rpid'");
+        }
+          echo "</tr></table>
+           </form>";
+         }
+      ?>
   </body>
   <style type="text/css">
     #buy{

@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <html>
 <head>
 <title> Place Order</title>
@@ -10,6 +13,12 @@
 </head>
 
 <body>
+<?php
+    if(!isset($_SESSION['user'])){
+        $_SESSION["msg"]="You need to login first!";
+        header("location: loginpage.html");
+    }
+?>
 	<div class="container">
 <div class="stepwizard">
     <div class="stepwizard-row setup-panel">

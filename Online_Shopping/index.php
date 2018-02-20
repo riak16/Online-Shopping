@@ -1,7 +1,10 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Shop</title>
+	<title>Nouvelle</title>
 	<link rel="stylesheet" type="text/css" href="default.css" title="default">
 	<script>
 		function abc()
